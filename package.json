@@ -4,12 +4,16 @@
   "private": true,
   "scripts": {
     "start": "parcel index.html --port 3000",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "devDependencies": {
-    "parcel-bundler": "1.11.0"
+    "parcel-bundler": "1.12.5"
   },
   "dependencies": {
-    "@babel/runtime": "7.14.6"
-  }
+    "@babel/runtime": "7.14.6",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
